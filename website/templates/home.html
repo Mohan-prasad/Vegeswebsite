@@ -1,0 +1,294 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Website</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F4F9F4; /* Light green background */
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(45deg, #4CAF50, #8BC34A); /* Vibrant green gradient */
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin: 0.5rem 0 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #4CAF50;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFD700; /* Golden color on hover */
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2rem;
+            color: #F57C00;          
+        }
+
+        .hero h2 {
+            font-size: 2.0rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin: 1rem 0 0;
+        }
+        .about {
+            text-align: left; /* Left-aligns the text */
+            margin: 20px auto; /* Centers the section horizontally with some spacing */
+            padding: 20px; /* Adds padding inside the section */
+            max-width: 800px; /* Limits the width of the content for better readability */
+            line-height: 1.8; /* Improves line spacing for readability */
+            font-size: 20px; /* Adjusts font size for clarity */
+            color: #333; /* Sets a readable text color */
+        }
+
+        .about h2 {
+            color: #4CAF50; /* Matches the green heading color */
+            font-size: 24px; /* Makes the heading prominent */
+            margin-bottom: 10px; /* Adds spacing below the heading */
+        }
+
+        .about p {
+            margin-bottom: 15px; /* Adds spacing between paragraphs */
+        }
+
+        
+        .section#about .content p {
+              font-size: 18px; /* Increase font size */
+              line-height: 1.6; /* Better readability */
+              text-align: left;
+        }
+
+        .section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+        
+        .video {
+            margin-top: 40px;
+            flex: 1; /* Allow the video content to take up available space */
+            text-align: right; /* Align the video to the right */
+        }
+
+        video {
+            max-width: 100%; /* Make the video responsive */
+            height: auto; /* Maintain aspect ratio */
+            border: 1px solid #ccc; /* Optional: Add a border around the video */
+            border-radius: 8px; /* Optional: Add rounded corners */
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card .info {
+            padding: 1.5rem;
+        }
+
+        .card .info h3 {
+            font-size: 1.5rem;
+            color: #4CAF50;
+            margin-bottom: 0.5rem;
+        }
+
+        .card .info p {
+            font-size: 1rem;
+            color: #777;
+        }
+        .container {
+            display: flex;
+            align-items: flex-start; /* Align top */
+        }
+        .text {
+            flex: 1;
+            padding: 10px;
+            text-align: left;
+            font-size: 1.3rem;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to SriVenkat Natural Farms</h1>
+        <p>Fresh Produce, Sustainable Practices, Back to roots</p>
+    </header>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section class="hero">
+        <h2>Chemical free and Pesticide free vegetables</h2>
+        <p>We bring you the freshest vegetables grown naturally, directly from farm to table.</p>
+    </section>
+    <section class="section" id="about">
+        <h2>About Us</h2>
+        <div class="content">
+            <p>
+                We are local farmers cultivating our vegetables using time-honoured, sustainable practices using Jeevamrutam, Ganajeevamrutam, and Panchagavya — potent natural formulations that enrich the soil, enhance plant vitality, and naturally deter pests, all without the use of chemicals. These traditional methods yield vegetables that are nutrient-dense, flavourful, and entirely safe for your family. We harvest to order and deliver directly from our farm to your doorstep — eliminating middlemen and extended storage. This ensures you receive vegetables that are consistently fresh, crisp, and full of flavour. Our farm-to-home delivery service guarantees seasonal produce at its peak quality, straight from our fields to your kitchen.<br> <b>Choosing chemical-free vegetables is not merely an option — it is essential.</b>
+            </p>
+            <p style="font-size: 30px;color: #FFA726;text-align: center;">
+                <b>Please Order vegetables on whatsapp number: +91 9849455663</b>
+            </p>
+            <p style="font-size: 20px;color: #2e4e1e;text-align: center;">
+                <b>Affordable prices, Door delivery now available in Kadiri town, SriSatyasai District, Andhra Pradesh. Bulk order to anywhere in india</b>
+            </p>
+            <p style="font-size: 20px;color: #2e4e1e;text-align: center;">
+                <b>Below are sample products and we provide many vegetables and fresh leafy vegatables</b>
+            </p>
+        </div>
+                
+         <!-- Add a video element Mohan -->
+
+       
+    </section>
+    <section class="section" id="products">
+        <h2>Our Products</h2>
+        <div class="products">
+            <!-- Product Card 1 -->
+            <div class="card">
+                <img src="{% static 'website/tomatoes.jpg' %}" alt="Tomatoes">
+                <div class="info">
+                    <h3>Fresh Tomatoes</h3>
+                    <p>Juicy. Ripe. Naturally Fresh.</p>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="card">
+                <img src="{% static 'website/raddish.jpg' %}" alt="Raddish">
+                <div class="info">
+                    <h3>Organic Raddish</h3>
+                    <p>Crunchy and sweet, perfect for every meal.</p>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="card">
+                <img src="{% static 'website/chilli.jpg' %}" alt="Chilli">
+                <div class="info">
+                    <h3>Fresh Chilli</h3>
+                    <p>Turn Up the Heat, Naturally.</p>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="card">
+                <img src="{% static 'website/okra.jpg' %}"  alt="okra">
+                <div class="info">
+                    <h3>Premium Okra</h3>
+                    <p>Okra at Its Greenest and Best</p>
+                </div>
+            </div>
+              <!-- Product Card 5 -->
+              <div class="card">
+                <img src="{% static 'website/bittergourd.jpg' %}"  alt="bittergourd">
+                <div class="info">
+                    <h3>Fresh Bitter Gourd</h3>
+                    <p>Naturally Fresh. Wonderfully Bitter</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="text">
+              <br>
+              <p> <b>Why Choose Our Vegetables?</b> <br>
+                <b>Pure and Safe:</b> Free from harmful chemicals, ensuring safety for your family.<br>
+                <b>Nutrient-Rich:</b> Packed with essential vitamins and minerals, straight from fertile, organic soils.<br>
+                <b>Sustainable Practices:</b> We use traditional methods, including Jeevamrutam and Panchagavya, to enrich the soil naturally and promote eco-friendly farming.<br>
+                <b>Farm-to-Home Freshness:</b> Delivered directly to preserve freshness and flavor.<br>
+                
+                Experience the goodness of vegetables grown the way nature intended. Taste the difference with our commitment to health, sustainability, and purity.
+
+              </p>
+            </div>
+            <div class="video">
+                <video width="640" height="360" controls>
+                <source src="{% static 'website/Naturalvideo.mp4' %}" type="video/mp4">
+                </video>
+            </div> 
+        </div>
+    </section>
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: medamanoori99@gmail.com | Phone/Whatsapp: (+91) 9849455663</p>
+    </section>
+    <footer>
+        <p>© 2025 Srivenkat Natural Farms. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
